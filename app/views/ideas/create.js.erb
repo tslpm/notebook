@@ -1,4 +1,3 @@
 $('#idea-list').append('<%= j(render 'idea_partial', :idea => @idea) %>');
-$('#idea_<%= @idea.id %>').hide();
 $('#idea_<%= @idea.id %>').slideDown();
 $('#idea_description').val('');

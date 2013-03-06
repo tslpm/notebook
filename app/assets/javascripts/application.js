@@ -14,3 +14,8 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function() {
+  $('.idea_list_item').slideDown();
+});
+
