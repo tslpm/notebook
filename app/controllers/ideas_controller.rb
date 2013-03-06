@@ -6,7 +6,7 @@ class IdeasController < ApplicationController
     @idea = Idea.new
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render 'index' }
       format.json { render json: @ideas }
     end
   end
@@ -47,6 +47,7 @@ class IdeasController < ApplicationController
       if @idea.save
         format.html { redirect_to ideas_url, notice: 'Idea was successfully created.' }
         format.json { render json: @idea, status: :created, location: @idea }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @idea.errors, status: :unprocessable_entity }
