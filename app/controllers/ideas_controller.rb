@@ -69,6 +69,7 @@ class IdeasController < ApplicationController
       if @idea.update_attributes(params[:idea])
         format.html { redirect_to ideas_url, notice: 'Idea was successfully updated.' }
         format.json { head :no_content }
+        format.js
       else
         format.html { render action: "edit" }
         format.json { render json: @idea.errors, status: :unprocessable_entity }
