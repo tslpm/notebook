@@ -16,6 +16,12 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $('.idea_list_item').slideDown();
+  $('.idea_list_item').show();
 });
+
+
+
+
+
+
 
