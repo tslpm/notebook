@@ -1,0 +1,2 @@
+$('#idea_<%= @idea.id %>').replaceWith("<%= escape_javascript(render('ajax_form', idea: @idea)) %>");
+

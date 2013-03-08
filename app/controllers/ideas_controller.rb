@@ -36,6 +36,11 @@ class IdeasController < ApplicationController
   # GET /ideas/1/edit
   def edit
     @idea = Idea.find(params[:id])
+
+    respond_to do |format|
+      format.html { render 'edit'}
+      format.js
+    end
   end
 
   # POST /ideas
