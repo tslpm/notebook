@@ -10,6 +10,9 @@
 
 <%= render 'ajax_form', idea: @idea %>
 
+<%= subscribe_to '/ideas/new' %>
+<%= subscribe_to '/ideas/destroy' %>
+<%= subscribe_to '/ideas/update' %>
 
 
 

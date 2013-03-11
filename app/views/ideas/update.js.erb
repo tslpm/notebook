@@ -1,2 +1,7 @@
 $('#idea_description').replaceWith('<%= j(render('idea_partial', idea: @idea)) %>')
 $('#idea_<%= @idea.id %>').slideDown();
+
+<% publish_to '/ideas/update' do %>
+  $('#idea_<%= @idea.id %>').replaceWith('<%= j(render('idea_partial', idea: @idea)) %>')
+  $('#idea_<%= @idea.id %>').slideDown();
+<% end %>
